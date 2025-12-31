@@ -13,10 +13,14 @@ public class HomePage {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
-	
+
 	// click on organization link
 	@FindBy(linkText = "Organizations")
 	private WebElement orgLink;
+
+	// click on Product link
+	@FindBy(linkText = "Products")
+	private WebElement productLink;
 
 	// administrator
 	@FindBy(xpath = "//img[@src='themes/softed/images/user.PNG']")
@@ -52,6 +56,5 @@ public class HomePage {
 		signOut.click();
 
 	}
-	
 
 }
