@@ -14,4 +14,9 @@ public class ProductPage {
 	//Click On Create Product button
 	@FindBy(xpath="//img[@alt='Create Product...']")
 	private WebElement productBtn;
+	
+	//Enter Product Details
+	@FindBy(name="productname")
+	private WebElement productDetails;
+	
 }
