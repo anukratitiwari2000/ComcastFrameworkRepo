@@ -13,14 +13,7 @@ public class HomePage {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
-	//Click on Product Link
-	@FindBy(linkText="Product")
-	private WebElement productLink;
 	
-	
-	public void setProductLink(WebElement productLink) {
-		this.productLink = productLink;
-	}
 	// click on organization link
 	@FindBy(linkText = "Organizations")
 	private WebElement orgLink;
@@ -59,8 +52,6 @@ public class HomePage {
 		signOut.click();
 
 	}
-	public WebElement getProductLink() {
-		return productLink;
-	}
+	
 
 }
