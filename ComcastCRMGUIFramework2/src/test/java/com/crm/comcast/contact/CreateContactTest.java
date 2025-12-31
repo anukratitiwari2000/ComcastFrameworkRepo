@@ -17,7 +17,7 @@ import com.comcast.crm.org.objectrepository.CreateNewOrganizationPage;
 import com.comcast.crm.org.objectrepository.HomePage;
 import com.comcast.crm.org.objectrepository.OrganizationInfoPage;
 import com.comcast.crm.org.objectrepository.OrganizationPage;
-import com.comcast.crm.org.objectrepository.SerachOrganizationInContactPage;
+import com.comcast.crm.org.objectrepository.SearchOrganizationInContactPage;
 import com.comcast.generic.webdriverutility.UtilityClassObject;
 import com.crm.comcast.baseutility.BaseClass;
 
@@ -174,7 +174,7 @@ public class CreateContactTest extends BaseClass {
 		webdriverUtility.switchNewBrowserTab(driver, "module=Accounts&action");
 
 		// search and select the organization name
-		SerachOrganizationInContactPage serachOrganizationInContactPage = new SerachOrganizationInContactPage(driver);
+		SearchOrganizationInContactPage serachOrganizationInContactPage = new SearchOrganizationInContactPage(driver);
 		// Search Organization
 		serachOrganizationInContactPage.getSerachOrganization().sendKeys(orgName);
 		// click on search button
