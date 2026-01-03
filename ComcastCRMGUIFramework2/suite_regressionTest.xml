@@ -6,6 +6,9 @@
 			<include name="RegressionTest"></include>
 		</run>
 	</groups>
+	<listeners>
+		<listener class-name="com.comcast.crm.listenerutility.ListenerImpClass" />
+	</listeners>
 
 	<test name="Test">
 		<classes>

@@ -51,8 +51,8 @@ public class BaseClass {
 	public void configBC() throws Throwable {
 		System.out.println("Launch the browser");
 		// String BROWSER=browser;
-		String BROWSER = fileUtility.getDataFromPropertiesFile("browser");
-
+		//String BROWSER = fileUtility.getDataFromPropertiesFile("browser");
+		String BROWSER = System.getProperty("browser",fileUtility.getDataFromPropertiesFile("browser"));
 		if (BROWSER.equals("chrome")) {
 			driver = new ChromeDriver();
 		} else if (BROWSER.equals("firefox")) {
@@ -70,10 +70,19 @@ public class BaseClass {
 	public void configBM() throws IOException {
 		System.out.println("Login to an application");
 		LoginPage loginPage = new LoginPage(driver);
-		String URL = fileUtility.getDataFromPropertiesFile("url");
+		/*String URL = fileUtility.getDataFromPropertiesFile("url");
 		String USERNAME = fileUtility.getDataFromPropertiesFile("username");
-		String PASSWORD = fileUtility.getDataFromPropertiesFile("password");
+		String PASSWORD = fileUtility.getDataFromPropertiesFile("password");*/
+		
+		/*when we pass data using CMD line so we have to use method System.getProperty
+		 * in case we forgot to pass data during Maven parameter CMD so we also
+		 * property file method to get data */
+		String URL = System.getProperty("url",fileUtility.getDataFromPropertiesFile("url"));
+		String USERNAME = System.getProperty("username",fileUtility.getDataFromPropertiesFile("username"));
+		String PASSWORD = System.getProperty("password",fileUtility.getDataFromPropertiesFile("password"));
+		
 		loginPage.loginToApp(URL, USERNAME, PASSWORD);
+		
 
 	}
 

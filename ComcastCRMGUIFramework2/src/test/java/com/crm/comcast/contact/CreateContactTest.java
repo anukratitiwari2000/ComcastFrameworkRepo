@@ -33,7 +33,7 @@ public class CreateContactTest extends BaseClass {
 
 		/* Fill the data on last name textField from excel file*/
 		UtilityClassObject.getTest().log(Status.INFO, "read the data from excelfile");
-		String lastName = excelUtility.getDataFromExcel("contact", 1, 3); //+ javaUtility.getRandomNumber();
+		String lastName = excelUtility.getDataFromExcel("contact", 1, 2) + javaUtility.getRandomNumber();
 
 		/* Click on Contacts link*/
 		UtilityClassObject.getTest().log(Status.INFO, "navigate to contact page");
