@@ -18,10 +18,7 @@ public class HomePage {
 	@FindBy(linkText = "Organizations")
 	private WebElement orgLink;
 
-	// click on Product link
-	@FindBy(linkText = "Products")
-	private WebElement productLink;
-
+	
 	// administrator
 	@FindBy(xpath = "//img[@src='themes/softed/images/user.PNG']")
 	private WebElement administrator;
