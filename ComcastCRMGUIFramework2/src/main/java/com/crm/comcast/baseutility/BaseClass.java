@@ -80,7 +80,7 @@ public class BaseClass {
 		String URL = System.getProperty("url",fileUtility.getDataFromPropertiesFile("url"));
 		String USERNAME = System.getProperty("username",fileUtility.getDataFromPropertiesFile("username"));
 		String PASSWORD = System.getProperty("password",fileUtility.getDataFromPropertiesFile("password"));
-		
+		//login
 		loginPage.loginToApp(URL, USERNAME, PASSWORD);
 		
 
